@@ -5,7 +5,7 @@ class ReqiestAPI:
     @staticmethod
     def get_price(base, quote, amount):
         url = 'https://www.cbr-xml-daily.ru/daily_json.js'
-        responce = requests.get(url) # .json()['Valute']
+        responce = requests.get(url)
         data = json.loads(responce.text)
         valutes = data['Valute']
         usd_value = float(valutes["USD"]["Value"])
